@@ -11,7 +11,7 @@ const Filters = ({ link, linkText }: Props) => (
         <Link to={link}>
             <button className="action-filters">
                 {linkText}
-                VER GRÁFICOS
+            
                     </button>
         </Link>
     </div>
