@@ -48,7 +48,7 @@ const CreateRecord = () => {
 
         axios.post(`${BASE_URL}/records`, payload)
             .then(() => {
-                Alert.alert('Dadossalvos com sucesso!');
+                Alert.alert('Dados alvos com sucesso!');
                 setName('');
                 setAge('');
                 setSelectedGame('');
@@ -84,12 +84,13 @@ const CreateRecord = () => {
                     placeholderTextColor="#9E9E9E"
                     maxLength={3} 
                     onChangeText={text => setAge(text)}
-                    value={age} />
+                    value={age} 
+                    />
 
                 <View style={styles.platformContainer} >
-                    <PlatformCard platform="PC" icon="laptop" onChange={() => handleChangePlatform} activePlatform={platform} />
-                    <PlatformCard platform="PLAYSTATION" icon="playstation" onChange={() => handleChangePlatform} activePlatform={platform} />
-                    <PlatformCard platform="XBOX" icon="xbox" onChange={() => handleChangePlatform} activePlatform={platform} />
+                    <PlatformCard platform="PC" icon="laptop" onChange={handleChangePlatform} activePlatform={platform} />
+                    <PlatformCard platform="PLAYSTATION" icon="playstation" onChange={handleChangePlatform} activePlatform={platform} />
+                    <PlatformCard platform="XBOX" icon="xbox" onChange={handleChangePlatform} activePlatform={platform} />
 
                 </View>
                 <RNPickerSelect
